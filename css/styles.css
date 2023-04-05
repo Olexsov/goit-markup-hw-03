@@ -11,13 +11,37 @@ body {
   background-color: var(--primary-white-color);
   color: var(--primary-text-color);
   font-family: "Roboto", sans-serif;
-  /* letter-spacing: 0.02em; */
   font-size: 16px;
-  /* line-height: 1.5; */
 }
 
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  outline: 2px solid turquoise;
 }
 
 /* Logo */
@@ -37,13 +61,14 @@ body {
   color: var(--title-text-color);
 }
 
+/* Page header */
+
 /* Site nav */
 
 .nav.link {
   color: var(--title-text-color);
   letter-spacing: 0.02em;
   font-weight: 500;
-  /* font-size: 16px; */
   line-height: 1.5;
   text-decoration: none;
 }
@@ -62,7 +87,6 @@ body {
 .address.link {
   color: var(--primary-text-color);
   letter-spacing: 0.02em;
-  /* font-size: 16px; */
   line-height: 1.5;
   text-decoration: none;
 }
@@ -76,9 +100,12 @@ body {
 
 .hero {
   background-color: var(--title-text-color);
+  margin-bottom: 120px;
 }
 
 .hero-title {
+  margin-bottom: 48px;
+
   color: var(--primary-white-color);
   font-size: 56px;
   line-height: 1.07;
@@ -105,6 +132,8 @@ body {
 /* Section */
 
 .section-title {
+  margin-bottom: 72px;
+
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -114,16 +143,35 @@ body {
   letter-spacing: 0.02em;
 }
 
+.section.velues,
+.section.we-doing {
+  margin-bottom: 120px;
+}
+
 .section.team {
   background-color: var(--another-accent-color);
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.section.our-projects {
+  padding-top: 96px;
+  padding-bottom: 120px;
 }
 
 .subsection-title {
+  margin-bottom: 8px;
+
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+}
+
+.img-team,
+.img-examples {
+  margin-bottom: 32px;
 }
 
 .text {
@@ -141,6 +189,10 @@ body {
 }
 
 /* Filters */
+
+.filters.list {
+  margin-bottom: 72px;
+}
 
 .filters-button {
   color: var(--primary-accent-color);
@@ -171,9 +223,16 @@ body {
 
 .footer {
   background-color: var(--title-text-color);
+  padding-top: 101.5px;
+  padding-bottom: 100px;
 }
 
 .footer .accent-studio,
 .footer .text {
   color: var(--another-accent-color);
+}
+
+.footer .logo,
+.accent-studio {
+  margin-bottom: 16px;
 }
