@@ -41,12 +41,17 @@ img {
   margin-left: auto;
   margin-right: auto;
 
-  outline: 2px solid turquoise;
+  /* outline: 2px solid turquoise; */
 }
 
 /* Logo */
 
 .logo.link {
+  padding-top: 25.5px;
+  padding-bottom: 25.5px;
+
+  margin-right: 76px;
+
   color: var(--primary-accent-color);
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.03em;
@@ -63,9 +68,34 @@ img {
 
 /* Page header */
 
+.header {
+  display: flex;
+  align-items: center;
+}
+
 /* Site nav */
 
+.nav {
+  display: flex;
+}
+
+.nav.list {
+  display: flex;
+}
+
+.nav .item {
+  /* outline: 1px solid violet; */
+}
+
+.nav .item + .item {
+  margin-left: 40px;
+}
+
 .nav.link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
   color: var(--title-text-color);
   letter-spacing: 0.02em;
   font-weight: 500;
@@ -80,11 +110,28 @@ img {
 
 /* Address */
 
+.address .list {
+  display: flex;
+}
+
+.address .item {
+  /* outline: 1px solid salmon; */
+}
+
+.address .item + .item {
+  margin-left: 40px;
+}
+
 .address {
   font-style: normal;
+  margin-left: auto;
 }
 
 .address.link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
   color: var(--primary-text-color);
   letter-spacing: 0.02em;
   line-height: 1.5;
@@ -114,6 +161,16 @@ img {
 }
 
 .hero-button {
+  padding-top: 16px;
+  padding-right: 32px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+
+  min-width: 169px;
+  min-height: 56px;
+  border-radius: 4px;
+  border-color: transparent;
+
   color: var(--primary-white-color);
   background-color: var(--primary-accent-color);
   letter-spacing: 0.04em;
@@ -131,6 +188,19 @@ img {
 
 /* Section */
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .section-title {
   margin-bottom: 72px;
 
@@ -143,6 +213,17 @@ img {
   letter-spacing: 0.02em;
 }
 
+.velues.list {
+  display: flex;
+  /* justify-content: calc(100 - 24 * 3) / 4; */
+  gap: 24px;
+}
+
+.we-doing.list {
+  display: flex;
+  gap: 24px;
+}
+
 .section.velues,
 .section.we-doing {
   margin-bottom: 120px;
@@ -152,6 +233,11 @@ img {
   background-color: var(--another-accent-color);
   padding-top: 120px;
   padding-bottom: 120px;
+}
+
+.team.list {
+  display: flex;
+  gap: 24px;
 }
 
 .section.our-projects {
@@ -186,15 +272,27 @@ img {
 
 .team .item {
   background-color: var(--primary-white-color);
+  padding-bottom: 32px;
 }
 
 /* Filters */
 
 .filters.list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
   margin-bottom: 72px;
 }
 
 .filters-button {
+  padding-top: 12px;
+  padding-right: 24px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+
+  border: 1px solid #e7e9fc;
+  border-radius: 4px;
+
   color: var(--primary-accent-color);
   background-color: var(--another-accent-color);
   letter-spacing: 0.04em;
@@ -214,9 +312,24 @@ img {
 
 /* Examples */
 
+.examples.list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
+}
+
 .examples .link {
   text-decoration: none;
   color: var(--primary-text-color);
+}
+
+.examples-card {
+  padding-bottom: 32px;
+}
+
+.examples-card-discrb {
+  padding-left: 16px;
 }
 
 /* Footer */
@@ -233,6 +346,8 @@ img {
 }
 
 .footer .logo,
-.accent-studio {
+.footer .accent-studio {
   margin-bottom: 16px;
+  margin-right: 0;
+  padding: 0;
 }
