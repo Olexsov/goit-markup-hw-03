@@ -5,6 +5,7 @@
   --secondary-accent-color: #404bbf;
   --another-accent-color: #f4f4fd;
   --primary-white-color: #ffffff;
+  --primary-border-color: #e7e9fc;
 }
 
 body {
@@ -13,6 +14,14 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Reset */
 
 .list {
   list-style: none;
@@ -30,9 +39,7 @@ p {
   margin: 0;
 }
 
-img {
-  display: block;
-}
+/* Container */
 
 .container {
   width: 1158px;
@@ -40,8 +47,6 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-
-  /* outline: 2px solid turquoise; */
 }
 
 /* Logo */
@@ -73,6 +78,10 @@ img {
   align-items: center;
 }
 
+.page-header {
+  border-bottom: 1px solid var(--primary-border-color);
+}
+
 /* Site nav */
 
 .nav {
@@ -83,16 +92,13 @@ img {
   display: flex;
 }
 
-.nav .item {
-  /* outline: 1px solid violet; */
-}
-
 .nav .item + .item {
   margin-left: 40px;
 }
 
 .nav.link {
   display: block;
+
   padding-top: 24px;
   padding-bottom: 24px;
 
@@ -114,10 +120,6 @@ img {
   display: flex;
 }
 
-.address .item {
-  /* outline: 1px solid salmon; */
-}
-
 .address .item + .item {
   margin-left: 40px;
 }
@@ -129,6 +131,7 @@ img {
 
 .address.link {
   display: block;
+
   padding-top: 24px;
   padding-bottom: 24px;
 
@@ -147,11 +150,14 @@ img {
 
 .hero {
   background-color: var(--title-text-color);
-  margin-bottom: 120px;
 }
 
 .hero-title {
   margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 496px;
 
   color: var(--primary-white-color);
   font-size: 56px;
@@ -161,6 +167,11 @@ img {
 }
 
 .hero-button {
+  display: block;
+
+  margin-left: auto;
+  margin-right: auto;
+
   padding-top: 16px;
   padding-right: 32px;
   padding-bottom: 16px;
@@ -188,6 +199,8 @@ img {
 
 /* Section */
 
+/* Visually-hiden section title */
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -213,10 +226,28 @@ img {
   letter-spacing: 0.02em;
 }
 
+.subsection-title {
+  margin-bottom: 8px;
+
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
 .velues.list {
   display: flex;
-  /* justify-content: calc(100 - 24 * 3) / 4; */
   gap: 24px;
+}
+
+.velues-item {
+  width: 264px;
+}
+
+.section.velues {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .we-doing.list {
@@ -224,9 +255,8 @@ img {
   gap: 24px;
 }
 
-.section.velues,
 .section.we-doing {
-  margin-bottom: 120px;
+  padding-bottom: 120px;
 }
 
 .section.team {
@@ -240,39 +270,32 @@ img {
   gap: 24px;
 }
 
-.section.our-projects {
-  padding-top: 96px;
-  padding-bottom: 120px;
-}
-
-.subsection-title {
-  margin-bottom: 8px;
-
-  color: var(--title-text-color);
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-}
-
-.img-team,
-.img-examples {
-  margin-bottom: 32px;
-}
-
-.text {
-  letter-spacing: 0.02em;
-  line-height: 1.5;
-}
-
 .team .subsection-title,
 .team .text {
   text-align: center;
 }
 
-.team .item {
+.team-item {
   background-color: var(--primary-white-color);
+
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-discrb {
+  padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.section.our-projects {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+.text {
+  letter-spacing: 0.02em;
+  line-height: 1.5;
 }
 
 /* Filters */
@@ -290,7 +313,7 @@ img {
   padding-bottom: 12px;
   padding-left: 24px;
 
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--primary-border-color);
   border-radius: 4px;
 
   color: var(--primary-accent-color);
@@ -324,12 +347,18 @@ img {
   color: var(--primary-text-color);
 }
 
-.examples-card {
+.examples-card-discrb {
+  padding-top: 32px;
   padding-bottom: 32px;
+  padding-left: 16px;
+
+  border-right: 1px solid var(--primary-border-color);
+  border-bottom: 1px solid var(--primary-border-color);
+  border-left: 1px solid var(--primary-border-color);
 }
 
-.examples-card-discrb {
-  padding-left: 16px;
+.examples-card {
+  background: var(--primary-white-color);
 }
 
 /* Footer */
@@ -345,8 +374,12 @@ img {
   color: var(--another-accent-color);
 }
 
-.footer .logo,
-.footer .accent-studio {
+.footer .text {
+  width: 264px;
+}
+
+.footer .link {
+  display: block;
   margin-bottom: 16px;
   margin-right: 0;
   padding: 0;
