@@ -86,14 +86,12 @@ p {
 
 .nav {
   display: flex;
+  align-items: center;
 }
 
 .nav.list {
   display: flex;
-}
-
-.nav .item + .item {
-  margin-left: 40px;
+  gap: 40px;
 }
 
 .nav.link {
@@ -118,10 +116,7 @@ p {
 
 .address .list {
   display: flex;
-}
-
-.address .item + .item {
-  margin-left: 40px;
+  gap: 40px;
 }
 
 .address {
@@ -149,6 +144,9 @@ p {
 /* Hero */
 
 .hero {
+  padding-top: 188px;
+  padding-bottom: 188px;
+
   background-color: var(--title-text-color);
 }
 
@@ -157,7 +155,7 @@ p {
   margin-left: auto;
   margin-right: auto;
 
-  width: 496px;
+  max-width: 496px;
 
   color: var(--primary-white-color);
   font-size: 56px;
@@ -178,9 +176,9 @@ p {
   padding-left: 32px;
 
   min-width: 169px;
-  min-height: 56px;
+  height: 56px;
   border-radius: 4px;
-  border-color: transparent;
+  border: none;
 
   color: var(--primary-white-color);
   background-color: var(--primary-accent-color);
@@ -277,20 +275,24 @@ p {
 
 .team-item {
   background-color: var(--primary-white-color);
+}
+
+.team-discrb {
+  padding-top: 32px;
+  padding-right: 16px;
+  padding-bottom: 32px;
+  padding-left: 16px;
 
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-discrb {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
 .section.our-projects {
   padding-top: 96px;
-  padding-bottom: 120px;
+  padding-right: 120px;
+  padding-bottom: 96px;
+  padding-left: 120px;
 }
 
 .text {
@@ -331,6 +333,7 @@ p {
 .filters-button:focus {
   color: var(--primary-white-color);
   background-color: var(--secondary-accent-color);
+  border: 1px solid transparent;
 }
 
 /* Examples */
@@ -349,6 +352,7 @@ p {
 
 .examples-card-discrb {
   padding-top: 32px;
+  padding-right: 16px;
   padding-bottom: 32px;
   padding-left: 16px;
 
@@ -365,7 +369,7 @@ p {
 
 .footer {
   background-color: var(--title-text-color);
-  padding-top: 101.5px;
+  padding-top: 100px;
   padding-bottom: 100px;
 }
 
@@ -375,11 +379,11 @@ p {
 }
 
 .footer .text {
-  width: 264px;
+  max-width: 264px;
 }
 
 .footer .link {
-  display: block;
+  display: inline-block;
   margin-bottom: 16px;
   margin-right: 0;
   padding: 0;
