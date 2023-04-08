@@ -143,7 +143,7 @@ p {
 
 /* Hero */
 
-.hero {
+.section-hero {
   padding-top: 188px;
   padding-bottom: 188px;
 
@@ -243,7 +243,7 @@ p {
   width: 264px;
 }
 
-.section.velues {
+.section-velues {
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -253,11 +253,11 @@ p {
   gap: 24px;
 }
 
-.section.we-doing {
+.section-we-doing {
   padding-bottom: 120px;
 }
 
-.section.team {
+.section-team {
   background-color: var(--another-accent-color);
   padding-top: 120px;
   padding-bottom: 120px;
@@ -288,11 +288,9 @@ p {
   border-radius: 0px 0px 4px 4px;
 }
 
-.section.our-projects {
+.section-our-projects {
   padding-top: 96px;
-  padding-right: 120px;
-  padding-bottom: 96px;
-  padding-left: 120px;
+  padding-bottom: 120px;
 }
 
 .text {
